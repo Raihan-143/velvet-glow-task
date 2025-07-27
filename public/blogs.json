@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Embrace the Art of Color Harmony",
+        "text": "Explore our collection of carefully choosen products expert advice and inspiring stories designed to help your discover your full potential. Whether you are seeking inspiration advice or the perfect product to elevate your routine.",
+        "image": "https://images.unsplash.com/photo-1589366600848-5751c4fe29ff?auto=format&fit=crop&w=600&q=80",
+        "buttonType": "filled"
+    },
+    {
+        "id": 2,
+        "title": "Embrace the Art of Color Harmony",
+        "text": "Explore our collection of carefully choosen products expert advice and inspiring stories designed to help your discover your full potential. Whether you are seeking inspiration advice or the perfect product to elevate your routine.",
+        "image": "https://images.unsplash.com/photo-1588513780691-6c61f5f1e4b8?auto=format&fit=crop&w=600&q=80",
+        "buttonType": "outlined"
+    },
+    {
+        "id": 3,
+        "title": "Embrace the Art of Color Harmony",
+        "text": "Explore our collection of carefully choosen products expert advice and inspiring stories designed to help your discover your full potential. Whether you are seeking inspiration advice or the perfect product to elevate your routine.",
+        "image": "https://images.unsplash.com/photo-1598992617526-76e8268ab1cc?auto=format&fit=crop&w=600&q=80",
+        "buttonType": "filled"
+    },
+    {
+        "id": 4,
+        "title": "Embrace the Art of Color Harmony",
+        "text": "Explore our collection of carefully choosen products expert advice and inspiring stories designed to help your discover your full potential. Whether you are seeking inspiration advice or the perfect product to elevate your routine.",
+        "image": "https://images.unsplash.com/photo-1583912086096-c79a3a9b0b97?auto=format&fit=crop&w=600&q=80",
+        "buttonType": "outlined"
+    }
+]

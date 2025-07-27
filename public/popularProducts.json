@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "name": "Lipstick",
+        "image": "https://i.ibb.co/gLFFBq3f/image-89.png",
+        "price": 120,
+        "discount": "50%"
+    },
+    {
+        "id": 2,
+        "name": "Lip Balm",
+        "image": "https://i.ibb.co/dHG717t/image-90.png",
+        "price": 120
+    },
+    {
+        "id": 3,
+        "name": "Blush",
+        "image": "https://i.ibb.co/twpMG9sj/image-91.png",
+        "price": 120
+    },
+    {
+        "id": 4,
+        "name": "Eye Shadow",
+        "image": "https://i.ibb.co/LXZr4RZm/image-93.png",
+        "price": 120,
+        "discount": "50%"
+    },
+    {
+        "id": 5,
+        "name": "Maskara",
+        "image": "https://i.ibb.co/R4c5KbDs/image-94.png",
+        "price": 120,
+        "discount": "50%"
+    },
+    {
+        "id": 6,
+        "name": "Foundation",
+        "image": "https://i.ibb.co/4Z0qTqKx/image-95.png",
+        "price": 120
+    },
+    {
+        "id": 7,
+        "name": "Jel",
+        "image": "https://i.ibb.co/0pyS6cJ5/image-96.png",
+        "price": 120
+    },
+    {
+        "id": 8,
+        "name": "Cream",
+        "image": "https://i.ibb.co/rKPkrf2g/image-97.png",
+        "price": 120
+    }
+]
