@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <div
-            className={`navbar shadow sticky top-0 z-50 px-4 transition-all duration-300 ${
+            className={`navbar shadow sticky top-0 z-50 lg:px-25 px-5 transition-all duration-300 ${
                 scrolled ? 'bg-white shadow-md' : 'bg-base-100'
             }`}
         >
@@ -45,19 +45,16 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-
                 <Link to="/" className="text-xl font-bold flex items-center gap-2 ml-2">
                     <img src="/Frame.png" alt="Logo" className="w-8 h-8" />
-                    <span className="text-2xl font-bold text-[#CE4E61]">Velvet Glow</span>
+                    <span className="text-2xl font-bold text-[#CE4E61] hidden md:block lg:block">Velvet Glow</span>
                 </Link>
             </div>
-
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {links}
                 </ul>
             </div>
-
             <div className="navbar-end">
                 <div className="flex items-center gap-4 text-gray-600">
                     <FaSearch className="cursor-pointer" />

@@ -36,7 +36,6 @@ const PerfumeSlider = () => {
                                 alt="perfume"
                                 className="w-full h-full object-cover"
                             />
-
                             {index === 0 && (
                                 <button
                                     onClick={handlePrev}
@@ -56,7 +55,6 @@ const PerfumeSlider = () => {
                         </div>
                     ))}
                 </div>
-
                 <div className="bg-[#232325] text-white p-8 rounded-lg flex flex-col justify-center">
                     <p className="text-sm text-orange-400 uppercase mb-2">Ready to Shop</p>
                     <h2 className="text-2xl font-bold leading-snug">

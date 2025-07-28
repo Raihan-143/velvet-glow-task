@@ -43,15 +43,16 @@ const Footer = () => {
                     <div className="mt-4">
                         <a
                             href="https://www.linkedin.com/in/raihanrana/"
-                            className="inline-block text-blue-500 text-3xl hover:text-blue-400 transition"
+                            target="_blank"
+                            rel="noreferrer"
+                             className="inline-block text-blue-500 text-3xl hover:text-blue-400 transition"
+                            title="LinkedIn"
                         >
                             <FaLinkedin />
                         </a>
                     </div>
                 </div>
             </div>
-
-            {/* Bottom Bar */}
             <div className="border-t border-white mt-8 pt-4 m-15 text-white text-sm">
                 2024 Copyright Benderlm | All Right Reserved
             </div>

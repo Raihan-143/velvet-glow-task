@@ -4,9 +4,9 @@ import { BsArrowUpRight } from "react-icons/bs";
 const Hero = () => {
     return (
         <div className="relative bg-white mt-5 overflow-hidden">
-           <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-4 gap-10">
+            <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-4 gap-10">
 
-         <div className="w-full lg:w-[48%] relative space-y-6 text-center items-center flex flex-col lg:items-start lg:text-left">
+                <div className="w-full lg:w-[48%] relative space-y-6 text-center items-center flex flex-col lg:items-start lg:text-left">
 
                     <div className="relative inline-block mb-3">
                         <img
@@ -24,7 +24,7 @@ const Hero = () => {
                         </p>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl font-bold leading-snug">
+                    <h1 className="font-maven text-4xl md:text-5xl font-bold leading-snug">
                         Fashion That <br />
                         Feels As Good As <br />
                         It{' '}
@@ -44,11 +44,11 @@ const Hero = () => {
                 </div>
 
                 <div className="w-full lg:w-[48%] relative flex items-center justify-center">
-                    <div className="absolute w-[280px] h-[280px] bg-pink-200 rounded-full blur-[120px] opacity-70 -z-10 top-1/3 right-6"></div>
+                    <div className="absolute w-[280px] h-[280px] hero-radial"></div>
                     <img
                         src="/hero.png"
                         alt="hero"
-                        className="w-[320px] md:w-[400px] lg:w-[480px] h-auto object-cover relative z-10"
+                        className="w-[320px] md:w-[400px] lg:w-[480px] h-auto bg-hero-radial object-cover relative z-10"
                     />
                     <div className="hidden md:block absolute top-[110px] right-[-10px] md:top-[120px] md:right-[10px] lg:top-[70px] lg:right-[-60px] w-[230px] text-sm z-20">
                         <img src="/picon.svg" alt="quote" className="w-6 mb-2" />
