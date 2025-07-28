@@ -117,8 +117,7 @@ Extra Small
 - Add AOS or Framer Motion animation
 
 ## ✅ Live Demo  
-[🔗 See Live](([https://calm-maamoul-766a91.netlify.app/]))
-
+[[🔗 See Live](https://calm-maamoul-766a91.netlify.app/)]
 ---
 
 ## Developed By
