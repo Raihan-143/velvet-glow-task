@@ -1,46 +1,69 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router';
+ 
 
 const Navbar = () => {
-    const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/shop'>Shop</NavLink></li>
-        <li><NavLink to='/product'>Product</NavLink></li>
-        <li><NavLink to='/blog'>Blog</NavLink></li>
-        <li><NavLink to='/contact'>Contact us</NavLink></li>
+     const [scrolled, setScrolled] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 0);
+        };
 
-    </>
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const links = (
+        <>
+            <li><NavLink to='/' className={({ isActive }) => isActive ? 'text-[#CE4E61] font-semibold' : 'hover:text-pink-400'}>Home</NavLink></li>
+            <li><NavLink to='/shop' className={({ isActive }) => isActive ? 'text-[#CE4E61] font-semibold' : 'hover:text-pink-400'}>Shop</NavLink></li>
+            <li><NavLink to='/product' className={({ isActive }) => isActive ? 'text-[#CE4E61] font-semibold' : 'hover:text-pink-400'}>Product</NavLink></li>
+            <li><NavLink to='/blog' className={({ isActive }) => isActive ? 'text-[#CE4E61] font-semibold' : 'hover:text-pink-400'}>Blog</NavLink></li>
+            <li><NavLink to='/contact' className={({ isActive }) => isActive ? 'text-[#CE4E61] font-semibold' : 'hover:text-pink-400'}>Contact us</NavLink></li>
+        </>
+    );
+
     return (
-        <div className="navbar bg-base-100 shadow-sm ">
+        <div
+            className={`navbar shadow sticky top-0 z-50 px-4 transition-all duration-300 ${
+                scrolled ? 'bg-white shadow-md' : 'bg-base-100'
+            }`}
+        >
             <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                <div className="dropdown lg:hidden">
+                    <div tabIndex={0} role="button" className="btn btn-ghost">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                    >
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-start">
-                    <Link to="/" className="text-xl font-bold flex items-center gap-2">
-                        <img src='/Frame.png' alt="Logo" className="w-8 h-8" />
-                        <span className="text-2xl font-bold text-pink-600">Velvet Glow</span>
-                    </Link>
-                </div>
+
+                <Link to="/" className="text-xl font-bold flex items-center gap-2 ml-2">
+                    <img src="/Frame.png" alt="Logo" className="w-8 h-8" />
+                    <span className="text-2xl font-bold text-[#CE4E61]">Velvet Glow</span>
+                </Link>
             </div>
+
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {links}
                 </ul>
             </div>
-            <div className="flex gap-4 items-center text-gray-600">
-                <FaSearch />
-                <FaUser />
-                <FaShoppingCart />
+
+            <div className="navbar-end">
+                <div className="flex items-center gap-4 text-gray-600">
+                    <FaSearch className="cursor-pointer" />
+                    <FaUser className="cursor-pointer" />
+                    <FaShoppingCart className="cursor-pointer" />
+                </div>
             </div>
         </div>
     );

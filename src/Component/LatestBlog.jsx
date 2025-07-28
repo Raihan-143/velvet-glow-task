@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-
 const LatestBlog = () => {
     const [blogs, setBlogs] = useState([]);
 
@@ -8,31 +7,39 @@ const LatestBlog = () => {
         fetch('/blogs.json')
             .then(res => res.json())
             .then(data => setBlogs(data))
-            .catch(error => console.error('Error loading blogs:', error))
+            .catch(error => console.error('Error loading blogs:', error));
     }, []);
-    return (
-        <section className='mt-10'>
-            <h2 className='text-center text-2xl md:text-3xl font-bold mb-10'>Latest News and Blog</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto'>
-                {blogs.map((blog, index) => (
-                    <div key={index} className='bg-white rounded-lg overflow-hidden shadow-sm'>
-                        <img src={blog.image} alt={blog.title} className='w-full h-56 object-cover' />
-                        <div className='p-5'>
-                            <h3 className='text-lg font-semibold mb-3'>{blog.title}</h3>
-                            <p className='text-gray-600 text-sm leading-relaxed mb-4'>{blog.text}</p>
-                            {blog.buttonType === 'filled' ? (
-                                <button className='bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition'>Read more</button>
 
+    return (
+        <section className='py-16 bg-white'>
+            <h2 className='text-center text-3xl font-bold mb-12'>Latest News and Blog</h2>
+
+            <div className='max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center'>
+                {blogs.map((blog, index) => (
+                    blog.type === 'text' ? (
+                        <div key={index} className='bg-white p-6 rounded-lg shadow-md w-[390px] h-[347px] flex flex-col justify-between'>
+                            <div>
+                                <h3 className='text-xl font-semibold mb-4'>{blog.title}</h3>
+                                <p className='text-gray-600 text-sm leading-relaxed mb-6'>{blog.text}</p>
+                            </div>
+                            {blog.buttonType === 'filled' ? (
+                                <button className='bg-[#CE4E61] text-white px-5 py-2 rounded hover:bg-red-700 transition'>Read more</button>
                             ) : (
-                                <button className="border border-red-600 text-red-600 px-4 py-2 rounded hover:bg-red-50 transition">
+                                <button className="border border-[#CE4E61] text-black px-5 py-2 rounded hover:bg-red-50 transition">
                                     Read more
                                 </button>
                             )}
-
                         </div>
-                    </div>
+                    ) : (
+                        <div key={index} className='overflow-hidden rounded w-[390px] h-[347px]'>
+                            <img
+                                src={blog.image}
+                                alt={blog.title}
+                                className='w-full h-full object-cover rounded'
+                            />
+                        </div>
+                    )
                 ))}
-
             </div>
         </section>
     );
